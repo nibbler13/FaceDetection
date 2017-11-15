@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
 [assembly: AssemblyTitle("FaceDetection")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Приложение для обрезки фото пользователя с использованием машинного зрения")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("OOO Klinika LMS")]
 [assembly: AssemblyProduct("FaceDetection")]
-[assembly: AssemblyCopyright("Copyright ©  2017")]
+[assembly: AssemblyCopyright("nn-admin ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

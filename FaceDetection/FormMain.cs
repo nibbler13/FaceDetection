@@ -266,8 +266,7 @@ namespace FaceDetection {
 			}
 
 			Control[] controls = new Control[] {
-				checkBoxMisAd,
-				checkBoxLoyalty,
+				checkBoxAdExchangeLoyaltySurvey,
 				checkBoxSelectedSize,
 				labelSavePath,
 				textBoxSavePath,
@@ -314,7 +313,7 @@ namespace FaceDetection {
 		private void UpdateSaveButtonsState() {
 			bool enabled = true;
 
-			if (!checkBoxSelectedSize.Checked && !checkBoxMisAd.Checked && !checkBoxLoyalty.Checked)
+			if (!checkBoxSelectedSize.Checked && !checkBoxAdExchangeLoyaltySurvey.Checked)
 				enabled = false;
 
 			if (checkBoxSelectedSize.Checked)
@@ -487,13 +486,9 @@ namespace FaceDetection {
 		private List<SaveFormat> GetSaveFormats() {
 			List<SaveFormat> saveFormats = new List<SaveFormat>();
 
-			if (checkBoxMisAd.Checked)
-				saveFormats.Add(new SaveFormat(checkBoxMisAd.Text.Replace(Environment.NewLine, " "),
+			if (checkBoxAdExchangeLoyaltySurvey.Checked)
+				saveFormats.Add(new SaveFormat(checkBoxAdExchangeLoyaltySurvey.Text.Replace(Environment.NewLine, " "),
 					500, 500, false));
-
-			if (checkBoxLoyalty.Checked)
-				saveFormats.Add(new SaveFormat(checkBoxLoyalty.Text.Replace(Environment.NewLine, " "),
-					500, 500, true));
 
 			if (checkBoxSelectedSize.Checked)
 				saveFormats.Add(new SaveFormat(textBoxSelectedWidth.Text + " x " + textBoxSelectedWidth.Text,

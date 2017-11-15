@@ -27,15 +27,15 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
 			this.buttonAdd = new System.Windows.Forms.Button();
 			this.listViewImages = new System.Windows.Forms.ListView();
 			this.columnHeaderFileName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.columnHeaderOriginalSize = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.columnHeaderResult = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.buttonDelete = new System.Windows.Forms.Button();
-			this.checkBoxMisAd = new System.Windows.Forms.CheckBox();
+			this.checkBoxAdExchangeLoyaltySurvey = new System.Windows.Forms.CheckBox();
 			this.groupBoxSave = new System.Windows.Forms.GroupBox();
-			this.checkBoxLoyalty = new System.Windows.Forms.CheckBox();
 			this.checkBoxCircle = new System.Windows.Forms.CheckBox();
 			this.buttonSavePath = new System.Windows.Forms.Button();
 			this.textBoxSavePath = new System.Windows.Forms.TextBox();
@@ -118,21 +118,22 @@
 			this.buttonDelete.UseVisualStyleBackColor = true;
 			this.buttonDelete.Click += new System.EventHandler(this.ButtonDelete_Click);
 			// 
-			// checkBoxMisAd
+			// checkBoxAdExchangeLoyaltySurvey
 			// 
-			this.checkBoxMisAd.AutoSize = true;
-			this.checkBoxMisAd.Enabled = false;
-			this.checkBoxMisAd.Location = new System.Drawing.Point(80, 41);
-			this.checkBoxMisAd.Name = "checkBoxMisAd";
-			this.checkBoxMisAd.Size = new System.Drawing.Size(177, 30);
-			this.checkBoxMisAd.TabIndex = 7;
-			this.checkBoxMisAd.Text = "Инфоклиника, Active Directory\r\n500 х 500, квадрат";
-			this.checkBoxMisAd.UseVisualStyleBackColor = true;
-			this.checkBoxMisAd.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
+			this.checkBoxAdExchangeLoyaltySurvey.AutoSize = true;
+			this.checkBoxAdExchangeLoyaltySurvey.Checked = true;
+			this.checkBoxAdExchangeLoyaltySurvey.CheckState = System.Windows.Forms.CheckState.Checked;
+			this.checkBoxAdExchangeLoyaltySurvey.Enabled = false;
+			this.checkBoxAdExchangeLoyaltySurvey.Location = new System.Drawing.Point(42, 42);
+			this.checkBoxAdExchangeLoyaltySurvey.Name = "checkBoxAdExchangeLoyaltySurvey";
+			this.checkBoxAdExchangeLoyaltySurvey.Size = new System.Drawing.Size(403, 17);
+			this.checkBoxAdExchangeLoyaltySurvey.TabIndex = 7;
+			this.checkBoxAdExchangeLoyaltySurvey.Text = "Инфоклиника, Active Directory, Exchange, LoyaltySurvey, 500 х 500, квадрат";
+			this.checkBoxAdExchangeLoyaltySurvey.UseVisualStyleBackColor = true;
+			this.checkBoxAdExchangeLoyaltySurvey.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
 			// 
 			// groupBoxSave
 			// 
-			this.groupBoxSave.Controls.Add(this.checkBoxLoyalty);
 			this.groupBoxSave.Controls.Add(this.checkBoxCircle);
 			this.groupBoxSave.Controls.Add(this.buttonSavePath);
 			this.groupBoxSave.Controls.Add(this.textBoxSavePath);
@@ -142,7 +143,7 @@
 			this.groupBoxSave.Controls.Add(this.buttonSaveSelected);
 			this.groupBoxSave.Controls.Add(this.labelSelectedWidth);
 			this.groupBoxSave.Controls.Add(this.checkBoxSelectedSize);
-			this.groupBoxSave.Controls.Add(this.checkBoxMisAd);
+			this.groupBoxSave.Controls.Add(this.checkBoxAdExchangeLoyaltySurvey);
 			this.groupBoxSave.Location = new System.Drawing.Point(12, 402);
 			this.groupBoxSave.Name = "groupBoxSave";
 			this.groupBoxSave.Size = new System.Drawing.Size(487, 144);
@@ -150,23 +151,11 @@
 			this.groupBoxSave.TabStop = false;
 			this.groupBoxSave.Text = "Параметры сохранения";
 			// 
-			// checkBoxLoyalty
-			// 
-			this.checkBoxLoyalty.AutoSize = true;
-			this.checkBoxLoyalty.Enabled = false;
-			this.checkBoxLoyalty.Location = new System.Drawing.Point(263, 41);
-			this.checkBoxLoyalty.Name = "checkBoxLoyalty";
-			this.checkBoxLoyalty.Size = new System.Drawing.Size(132, 30);
-			this.checkBoxLoyalty.TabIndex = 19;
-			this.checkBoxLoyalty.Text = "Монитор лояльности\r\n500 x 500, круг";
-			this.checkBoxLoyalty.UseVisualStyleBackColor = true;
-			this.checkBoxLoyalty.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
-			// 
 			// checkBoxCircle
 			// 
 			this.checkBoxCircle.AutoSize = true;
 			this.checkBoxCircle.Enabled = false;
-			this.checkBoxCircle.Location = new System.Drawing.Point(202, 77);
+			this.checkBoxCircle.Location = new System.Drawing.Point(202, 65);
 			this.checkBoxCircle.Name = "checkBoxCircle";
 			this.checkBoxCircle.Size = new System.Drawing.Size(49, 17);
 			this.checkBoxCircle.TabIndex = 18;
@@ -197,9 +186,9 @@
 			// buttonSaveAll
 			// 
 			this.buttonSaveAll.Enabled = false;
-			this.buttonSaveAll.Location = new System.Drawing.Point(321, 103);
+			this.buttonSaveAll.Location = new System.Drawing.Point(321, 89);
 			this.buttonSaveAll.Name = "buttonSaveAll";
-			this.buttonSaveAll.Size = new System.Drawing.Size(160, 35);
+			this.buttonSaveAll.Size = new System.Drawing.Size(160, 49);
 			this.buttonSaveAll.TabIndex = 11;
 			this.buttonSaveAll.Text = "Обработать и сохранить\r\nвесь список";
 			this.buttonSaveAll.UseVisualStyleBackColor = true;
@@ -208,7 +197,7 @@
 			// textBoxSelectedWidth
 			// 
 			this.textBoxSelectedWidth.Enabled = false;
-			this.textBoxSelectedWidth.Location = new System.Drawing.Point(377, 75);
+			this.textBoxSelectedWidth.Location = new System.Drawing.Point(377, 63);
 			this.textBoxSelectedWidth.MaxLength = 4;
 			this.textBoxSelectedWidth.Name = "textBoxSelectedWidth";
 			this.textBoxSelectedWidth.Size = new System.Drawing.Size(60, 20);
@@ -229,9 +218,9 @@
 			// buttonSaveSelected
 			// 
 			this.buttonSaveSelected.Enabled = false;
-			this.buttonSaveSelected.Location = new System.Drawing.Point(6, 103);
+			this.buttonSaveSelected.Location = new System.Drawing.Point(6, 88);
 			this.buttonSaveSelected.Name = "buttonSaveSelected";
-			this.buttonSaveSelected.Size = new System.Drawing.Size(160, 35);
+			this.buttonSaveSelected.Size = new System.Drawing.Size(160, 50);
 			this.buttonSaveSelected.TabIndex = 9;
 			this.buttonSaveSelected.Text = "Обработать и сохранить\r\nвыбранное изображение";
 			this.buttonSaveSelected.UseVisualStyleBackColor = true;
@@ -241,7 +230,7 @@
 			// 
 			this.labelSelectedWidth.AutoSize = true;
 			this.labelSelectedWidth.Enabled = false;
-			this.labelSelectedWidth.Location = new System.Drawing.Point(257, 78);
+			this.labelSelectedWidth.Location = new System.Drawing.Point(257, 66);
 			this.labelSelectedWidth.Name = "labelSelectedWidth";
 			this.labelSelectedWidth.Size = new System.Drawing.Size(114, 13);
 			this.labelSelectedWidth.TabIndex = 11;
@@ -251,7 +240,7 @@
 			// 
 			this.checkBoxSelectedSize.AutoSize = true;
 			this.checkBoxSelectedSize.Enabled = false;
-			this.checkBoxSelectedSize.Location = new System.Drawing.Point(50, 77);
+			this.checkBoxSelectedSize.Location = new System.Drawing.Point(50, 65);
 			this.checkBoxSelectedSize.Name = "checkBoxSelectedSize";
 			this.checkBoxSelectedSize.Size = new System.Drawing.Size(146, 17);
 			this.checkBoxSelectedSize.TabIndex = 10;
@@ -343,6 +332,7 @@
 			this.Controls.Add(this.groupBoxFileList);
 			this.Controls.Add(this.groupBoxSave);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.MaximizeBox = false;
 			this.Name = "FormMain";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -367,7 +357,7 @@
 		private System.Windows.Forms.Button buttonAdd;
 		private System.Windows.Forms.ListView listViewImages;
 		private System.Windows.Forms.Button buttonDelete;
-		private System.Windows.Forms.CheckBox checkBoxMisAd;
+		private System.Windows.Forms.CheckBox checkBoxAdExchangeLoyaltySurvey;
 		private System.Windows.Forms.GroupBox groupBoxSave;
 		private System.Windows.Forms.Label labelSelectedWidth;
 		private System.Windows.Forms.CheckBox checkBoxSelectedSize;
@@ -387,7 +377,6 @@
 		private System.Windows.Forms.PictureBox pictureBoxBottomLineLeft;
 		private System.Windows.Forms.ProgressBar progressBar;
 		private System.Windows.Forms.CheckBox checkBoxCircle;
-		private System.Windows.Forms.CheckBox checkBoxLoyalty;
 	}
 }
 
